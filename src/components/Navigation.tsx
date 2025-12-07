@@ -43,26 +43,26 @@ export default function Navigation({ currentPage, onPageChange, onGetSeatClick }
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <div className="flex items-center">
             <button
               onClick={() => handleNavClick('home')}
-              className="flex items-center space-x-3 transition-all duration-300 transform hover:scale-105 relative group"
+              className="flex items-center space-x-2 sm:space-x-3 transition-all duration-300 transform hover:scale-105 relative group"
             >
               <img 
                 src="/logo.png" 
                 alt="Screw Systems Logo - Engineering Development and Consulting Company" 
-                className="h-10 w-10 rounded-full object-cover border-2 border-blue-800 shadow-md"
+                className="h-8 w-8 sm:h-10 sm:w-10 rounded-full object-cover border-2 border-navy-800 shadow-md"
                 width="40"
                 height="40"
                 loading="eager"
                 style={{ display: logoError ? 'none' : 'block' }}
                 onError={() => setLogoError(true)}
               />
-              <span className="text-xl font-bold text-blue-800 group-hover:text-blue-900 relative z-10">Screw Systems</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-800 group-hover:w-full transition-all duration-300"></span>
+              <span className="text-base sm:text-xl font-bold text-navy-800 group-hover:text-navy-900 relative z-10">Screw Systems</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-navy-800 group-hover:w-full transition-all duration-300"></span>
             </button>
           </div>
 
@@ -74,8 +74,8 @@ export default function Navigation({ currentPage, onPageChange, onGetSeatClick }
                 onClick={() => handleNavClick(item.id)}
                 className={`flex items-center px-3 py-2 rounded-lg font-medium transition-all duration-300 relative group ${
                   currentPage === item.id
-                    ? 'text-blue-800 bg-blue-50'
-                    : 'text-gray-600 hover:text-blue-800 hover:bg-blue-50'
+                    ? 'text-navy-800 bg-navy-50'
+                    : 'text-slate-600 hover:text-navy-800 hover:bg-navy-50'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -84,7 +84,7 @@ export default function Navigation({ currentPage, onPageChange, onGetSeatClick }
                 }`} />
                 {item.label}
                 {currentPage === item.id && (
-                  <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-blue-800 rounded-full animate-scale-in"></span>
+                  <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-navy-800 rounded-full animate-scale-in"></span>
                 )}
               </button>
             ))}
@@ -94,7 +94,8 @@ export default function Navigation({ currentPage, onPageChange, onGetSeatClick }
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 hover:text-blue-800 transition-all duration-300 transform hover:scale-110 relative z-50"
+              className="text-slate-600 hover:text-navy-800 transition-all duration-300 transform hover:scale-110 relative z-50 p-2 -mr-2"
+              aria-label="Toggle menu"
             >
               {isMenuOpen ? (
                 <X className="w-6 h-6 animate-scale-in" />
@@ -109,15 +110,15 @@ export default function Navigation({ currentPage, onPageChange, onGetSeatClick }
         <div className={`md:hidden overflow-hidden transition-all duration-300 ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="py-4 border-t border-gray-200 space-y-2">
+          <div className="py-3 border-t border-gray-200 space-y-1">
             {navItems.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`w-full flex items-center px-3 py-3 rounded-lg font-medium transition-all duration-300 transform ${
+                className={`w-full flex items-center px-4 py-3 rounded-lg font-medium transition-all duration-300 transform text-sm ${
                   currentPage === item.id
-                    ? 'text-blue-800 bg-blue-50 scale-105'
-                    : 'text-gray-600 hover:text-blue-800 hover:bg-blue-50 hover:scale-105'
+                    ? 'text-navy-800 bg-navy-50 scale-105'
+                    : 'text-slate-600 hover:text-navy-800 hover:bg-navy-50 hover:scale-105'
                 }`}
                 style={{ 
                   animation: isMenuOpen ? `fadeInUp 0.4s ease-out ${index * 0.1}s both` : 'none'

@@ -5,16 +5,32 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     line-height: 1.2;
+    word-wrap: break-word;
   }
   
   body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    input, textarea, select {
+      font-size: 16px; /* Prevents zoom on iOS */
+    }
   }
 }
 
@@ -25,7 +41,7 @@
 
   /* Animated gradient background */
   .animated-gradient {
-    background: linear-gradient(-45deg, #E3F2FD, #BBDEFB, #90CAF9, #64B5F6);
+    background: linear-gradient(-45deg, #F0F4F8, #D9E2EC, #BCCCDC, #9FB3C8);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
   }
@@ -34,9 +50,9 @@
   .shimmer-text {
     background: linear-gradient(
       90deg,
-      #1A237E 0%,
-      #3F51B5 50%,
-      #1A237E 100%
+      #1E293B 0%,
+      #334E68 50%,
+      #1E293B 100%
     );
     background-size: 200% auto;
     -webkit-background-clip: text;
@@ -123,13 +139,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1A237E;
+  background: #1E293B;
   border-radius: 4px;
   transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0D47A1;
+  background: #334E68;
 }
 
 /* Smooth page transitions */
