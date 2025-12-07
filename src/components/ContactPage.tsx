@@ -69,7 +69,7 @@ export default function ContactPage() {
   };
 
   const handleWhatsAppClick = () => {
-    const message = `Hi! I'd like to know more about Screw Systems courses and services.`;
+    const message = `Hi! I'd like to know more about Screw Systems development and consultancy services.`;
     const whatsappUrl = `https://wa.me/919876543210?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -113,8 +113,11 @@ export default function ContactPage() {
           <div className="flex justify-center mb-6">
             <img 
               src="/logo.png" 
-              alt="Screw Systems Logo" 
+              alt="Screw Systems Logo - Engineering Development and Consulting Company" 
               className="h-20 w-20 rounded-full object-cover border-4 border-blue-800 shadow-xl"
+              width="80"
+              height="80"
+              loading="lazy"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">

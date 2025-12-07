@@ -36,9 +36,13 @@ export default function Navigation({ currentPage, onPageChange, onGetSeatClick }
   };
 
   return (
-    <nav className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
-      scrolled ? 'shadow-xl bg-white/95 backdrop-blur-sm' : ''
-    }`}>
+    <nav 
+      className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'shadow-xl bg-white/95 backdrop-blur-sm' : ''
+      }`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -49,8 +53,11 @@ export default function Navigation({ currentPage, onPageChange, onGetSeatClick }
             >
               <img 
                 src="/logo.png" 
-                alt="Screw Systems Logo" 
+                alt="Screw Systems Logo - Engineering Development and Consulting Company" 
                 className="h-10 w-10 rounded-full object-cover border-2 border-blue-800 shadow-md"
+                width="40"
+                height="40"
+                loading="eager"
                 style={{ display: logoError ? 'none' : 'block' }}
                 onError={() => setLogoError(true)}
               />

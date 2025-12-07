@@ -7,7 +7,11 @@ export default function Footer() {
   const [logoError, setLogoError] = useState(false);
 
   return (
-    <footer className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-16 relative overflow-hidden">
+    <footer 
+      className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-16 relative overflow-hidden"
+      role="contentinfo"
+      aria-label="Site footer"
+    >
       {/* Animated background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:50px_50px] animate-spin-slow"></div>
@@ -25,8 +29,11 @@ export default function Footer() {
             <div className="flex items-center space-x-3 mb-4">
               <img 
                 src="/logo.png" 
-                alt="Screw Systems Logo" 
+                alt="Screw Systems Logo - Engineering Development and Consulting Company" 
                 className="h-16 w-16 rounded-full object-cover border-2 border-blue-300 shadow-lg"
+                width="64"
+                height="64"
+                loading="lazy"
                 style={{ display: logoError ? 'none' : 'block' }}
                 onError={() => setLogoError(true)}
               />

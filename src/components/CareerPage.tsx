@@ -28,12 +28,12 @@ export default function CareerPage() {
       requirements: ['M.Tech in Structural Engineering', '7+ years experience', 'STAAD Pro & ETABS expertise', 'Client management skills']
     },
     {
-      title: 'Course Content Developer',
-      department: 'Content & Curriculum',
+      title: 'Technical Content Developer',
+      department: 'Content & Documentation',
       location: 'Remote / Bangalore',
       type: 'Full-time',
       experience: '3+ years',
-      description: 'Create and update course materials, develop development modules, and ensure content quality.',
+      description: 'Create and update technical documentation, develop content modules, and ensure quality of technical materials.',
       requirements: ['Engineering degree', '3+ years experience', 'Content creation skills', 'Technical writing ability']
     },
     {
@@ -44,6 +44,99 @@ export default function CareerPage() {
       experience: '2+ years',
       description: 'Drive business growth by identifying opportunities, building client relationships, and expanding market presence.',
       requirements: ['Any graduate', '2+ years sales experience', 'Excellent communication', 'Engineering domain knowledge']
+    }
+  ];
+
+  const internshipPositions = [
+    {
+      title: 'Generative AI Intern',
+      department: 'AI & Machine Learning',
+      location: 'Remote / Bangalore',
+      type: 'Internship',
+      experience: 'Fresher',
+      description: 'Learn and work on cutting-edge Generative AI technologies. Build AI models and applications using modern frameworks.',
+      requirements: ['Any graduate or final year student', 'Basic programming knowledge', 'Interest in AI/ML', 'Willingness to learn']
+    },
+    {
+      title: 'AI Tools & Automation Intern',
+      department: 'AI & Automation',
+      location: 'Remote / Bangalore',
+      type: 'Internship',
+      experience: 'Fresher',
+      description: 'Develop automation solutions using AI tools. Work on process automation, chatbots, and intelligent systems.',
+      requirements: ['Any graduate or final year student', 'Basic programming skills', 'Logical thinking', 'Problem-solving attitude']
+    },
+    {
+      title: 'Full Stack Web Development Intern',
+      department: 'Web Development',
+      location: 'Remote / Bangalore',
+      type: 'Internship',
+      experience: 'Fresher',
+      description: 'Build full-stack web applications using modern technologies. Work on frontend, backend, and database development.',
+      requirements: ['Any graduate or final year student', 'Basic HTML/CSS/JavaScript', 'Eagerness to learn frameworks', 'Portfolio preferred']
+    },
+    {
+      title: 'Data Analytics Intern (Excel + Power BI)',
+      department: 'Data Analytics',
+      location: 'Remote / Bangalore',
+      type: 'Internship',
+      experience: 'Fresher',
+      description: 'Analyze data and create visualizations using Excel and Power BI. Work on real-world data analytics projects.',
+      requirements: ['Any graduate or final year student', 'Basic Excel knowledge', 'Analytical mindset', 'Attention to detail']
+    },
+    {
+      title: 'Python Programming Intern',
+      department: 'Software Development',
+      location: 'Remote / Bangalore',
+      type: 'Internship',
+      experience: 'Fresher',
+      description: 'Develop Python applications and scripts. Learn Python frameworks, libraries, and best practices.',
+      requirements: ['Any graduate or final year student', 'Basic programming concepts', 'Interest in Python', 'Problem-solving skills']
+    },
+    {
+      title: 'UI/UX Design Intern',
+      department: 'Design',
+      location: 'Remote / Bangalore',
+      type: 'Internship',
+      experience: 'Fresher',
+      description: 'Design user interfaces and experiences for web and mobile applications. Create wireframes, prototypes, and design systems.',
+      requirements: ['Any graduate or final year student', 'Creative mindset', 'Basic design tools knowledge', 'Portfolio preferred']
+    },
+    {
+      title: 'Cybersecurity Fundamentals Intern',
+      department: 'Cybersecurity',
+      location: 'Remote / Bangalore',
+      type: 'Internship',
+      experience: 'Fresher',
+      description: 'Learn cybersecurity fundamentals, threat analysis, and security best practices. Work on security assessments.',
+      requirements: ['Any graduate or final year student', 'Basic IT knowledge', 'Interest in security', 'Ethical mindset']
+    },
+    {
+      title: 'Git & GitHub Basics Intern',
+      department: 'Version Control',
+      location: 'Remote / Bangalore',
+      type: 'Internship',
+      experience: 'Fresher',
+      description: 'Master version control with Git and GitHub. Learn collaborative development workflows and best practices.',
+      requirements: ['Any graduate or final year student', 'Basic command line knowledge', 'Team collaboration skills', 'Willingness to learn']
+    },
+    {
+      title: 'Mobile App UI Design Intern',
+      department: 'Mobile Design',
+      location: 'Remote / Bangalore',
+      type: 'Internship',
+      experience: 'Fresher',
+      description: 'Design mobile app interfaces for iOS and Android. Create responsive designs and mobile-first experiences.',
+      requirements: ['Any graduate or final year student', 'Design thinking', 'Mobile design principles', 'Creative portfolio']
+    },
+    {
+      title: 'Digital Marketing Intern',
+      department: 'Marketing',
+      location: 'Remote / Bangalore',
+      type: 'Internship',
+      experience: 'Fresher',
+      description: 'Learn digital marketing strategies, SEO, social media marketing, and content creation. Work on real marketing campaigns.',
+      requirements: ['Any graduate or final year student', 'Good communication skills', 'Social media knowledge', 'Creative writing']
     }
   ];
 
@@ -280,8 +373,71 @@ export default function CareerPage() {
         </div>
       </section>
 
-      {/* How to Apply */}
+      {/* Internship Positions for Freshers */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Internship Opportunities for Freshers</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Kickstart your career with hands-on experience in cutting-edge technologies
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {internshipPositions.map((internship, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 transform hover:-translate-y-2"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <h3 className="text-lg font-bold text-gray-900">{internship.title}</h3>
+                  <span className="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    {internship.type}
+                  </span>
+                </div>
+                
+                <div className="flex flex-wrap items-center gap-3 mb-4 text-sm text-gray-600">
+                  <div className="flex items-center">
+                    <MapPin className="w-4 h-4 mr-1" />
+                    {internship.location}
+                  </div>
+                  <div className="flex items-center">
+                    <Briefcase className="w-4 h-4 mr-1" />
+                    {internship.experience}
+                  </div>
+                </div>
+                
+                <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  {internship.description}
+                </p>
+                
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">Requirements:</h4>
+                  <ul className="space-y-1">
+                    {internship.requirements.map((req, idx) => (
+                      <li key={idx} className="flex items-start text-xs text-gray-600">
+                        <CheckCircle className="w-3 h-3 mr-2 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span>{req}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <a 
+                  href={`mailto:screwsystems001@gmail.com?subject=Internship Application - ${encodeURIComponent(internship.title)}&body=Dear Hiring Manager,%0A%0AI am a fresher interested in applying for the internship position: ${encodeURIComponent(internship.title)} (${encodeURIComponent(internship.department)}).%0A%0AI am eager to learn and contribute to your team.%0A%0APlease find my resume attached.%0A%0AThank you for considering my application.%0A%0ABest regards`}
+                  className="group bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-xl font-semibold text-sm transition-colors duration-200 flex items-center justify-center w-full"
+                >
+                  Apply for Internship
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How to Apply */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">

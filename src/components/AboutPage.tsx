@@ -35,8 +35,11 @@ export default function AboutPage() {
           <div className="flex justify-center mb-6">
             <img 
               src="/logo.png" 
-              alt="Screw Systems Logo" 
+              alt="Screw Systems Logo - Engineering Development and Consulting Company" 
               className="h-20 w-20 rounded-full object-cover border-4 border-blue-800 shadow-xl"
+              width="80"
+              height="80"
+              loading="lazy"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
@@ -152,7 +155,7 @@ export default function AboutPage() {
             Join hundreds of professionals who have already advanced their careers with us
           </p>
           <button className="group bg-white hover:bg-blue-50 text-blue-800 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center mx-auto">
-            Explore Courses
+            Explore Services
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

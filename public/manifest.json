@@ -1,0 +1,27 @@
+{
+  "name": "Screw Systems - Engineering Development & Consulting",
+  "short_name": "Screw Systems",
+  "description": "Professional engineering development and consulting services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "engineering", "consulting"],
+  "lang": "en-US"
+}
+

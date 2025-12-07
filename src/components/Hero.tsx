@@ -12,7 +12,10 @@ export default function Hero({ onGetSeatClick }: HeroProps) {
   const { elementRef: statsRef, isVisible: statsVisible } = useScrollAnimation({ triggerOnce: true });
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 min-h-screen flex items-center overflow-hidden">
+    <section 
+      className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 min-h-screen flex items-center overflow-hidden"
+      aria-label="Hero section"
+    >
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full animate-spin-slow" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,15 +59,19 @@ export default function Hero({ onGetSeatClick }: HeroProps) {
               <button
                 onClick={onGetSeatClick}
                 className="group bg-blue-800 hover:bg-blue-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-110 hover:shadow-2xl hover:animate-glow flex items-center justify-center relative overflow-hidden"
+                aria-label="Get a seat - Contact us for services"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 group-hover:animate-shimmer"></span>
                 Get Seat
                 <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
               </button>
               
-              <button className="border-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group">
+              <button 
+                className="border-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group"
+                aria-label="View our services"
+              >
                 <BookOpen className="mr-2 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                View Courses
+                View Services
               </button>
             </div>
             

@@ -9,7 +9,7 @@ export default function GetSeatForm() {
     phoneNumber: '',
     whatsappNumber: '',
     college: '',
-    course: '',
+    service: '',
     yearOfStudy: '',
     city: '',
     state: '',
@@ -19,13 +19,14 @@ export default function GetSeatForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { elementRef, isVisible } = useScrollAnimation({ triggerOnce: true });
 
-  const courses = [
-    'Advanced AutoCAD & Design',
-    'Project Management Professional',
-    'Structural Engineering Analysis',
-    'Civil Engineering Diploma',
-    'Mechanical Design Engineering',
-    'Electrical Systems Design',
+  const services = [
+    'Software Development',
+    'Engineering Consultancy',
+    'System Design & Architecture',
+    'Technical Consulting',
+    'Project Management',
+    'Quality Assurance & Testing',
+    'Custom Solutions Development',
     'Other'
   ];
 
@@ -52,7 +53,7 @@ export default function GetSeatForm() {
 
     // Simulate form submission
     setTimeout(() => {
-      const message = `Hi! I'm interested in reserving a seat at Screw Systems%0A%0A*Student Information:*%0A👤 Name: ${formData.fullName}%0A📧 Email: ${formData.email}%0A📱 Phone: ${formData.phoneNumber}%0A💬 WhatsApp: ${formData.whatsappNumber || formData.phoneNumber}%0A%0A*Academic Details:*%0A🏫 College: ${formData.college}%0A📚 Course Interested: ${formData.course}%0A📖 Year of Study: ${formData.yearOfStudy}%0A%0A*Location:*%0A📍 City: ${formData.city}%0A🗺️ State: ${formData.state}%0A%0A*Additional Message:*%0A${formData.message || 'Please provide more details about the course and enrollment process.'}`;
+      const message = `Hi! I'm interested in reserving a seat at Screw Systems%0A%0A*Student Information:*%0A👤 Name: ${formData.fullName}%0A📧 Email: ${formData.email}%0A📱 Phone: ${formData.phoneNumber}%0A💬 WhatsApp: ${formData.whatsappNumber || formData.phoneNumber}%0A%0A*Academic Details:*%0A🏫 College: ${formData.college}%0A📚 Service Interested: ${formData.service}%0A📖 Year of Study: ${formData.yearOfStudy}%0A%0A*Location:*%0A📍 City: ${formData.city}%0A🗺️ State: ${formData.state}%0A%0A*Additional Message:*%0A${formData.message || 'Please provide more details about the service and your requirements.'}`;
       const whatsappUrl = `https://wa.me/919876543210?text=${message}`;
       
       window.open(whatsappUrl, '_blank');
@@ -68,7 +69,7 @@ export default function GetSeatForm() {
           phoneNumber: '', 
           whatsappNumber: '',
           college: '',
-          course: '', 
+          service: '', 
           yearOfStudy: '',
           city: '',
           state: '',
@@ -241,21 +242,21 @@ export default function GetSeatForm() {
                 </div>
                 
                 <div className="mt-4">
-                  <label htmlFor="course" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Course Interested In *
+                  <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Service Interested In *
                   </label>
                   <select
-                    id="course"
-                    name="course"
-                    value={formData.course}
+                    id="service"
+                    name="service"
+                    value={formData.service}
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-gray-400"
                   >
-                    <option value="">Select a course</option>
-                    {courses.map((course, index) => (
-                      <option key={index} value={course}>
-                        {course}
+                    <option value="">Select a service</option>
+                    {services.map((service, index) => (
+                      <option key={index} value={service}>
+                        {service}
                       </option>
                     ))}
                   </select>
