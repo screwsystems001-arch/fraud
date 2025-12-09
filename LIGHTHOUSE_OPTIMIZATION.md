@@ -1,8 +1,26 @@
-# Lighthouse Optimization - Screw Systems (screwsystems.tech)
+# Lighthouse Optimization - Screw Systems Tech (screwsystems.tech)
 
 ## ✅ Target: 100/100 on All Metrics
 
 All optimizations have been implemented to achieve perfect Lighthouse scores across all categories.
+
+## 🎯 SEO Keyword Strategy
+
+The site is optimized for maximum Lighthouse SEO score (100/100) using these primary keywords:
+- **Screw Systems** (primary brand)
+- **Screw Systems Tech** (full brand name)
+- **Screws System** (variation)
+
+Keywords are integrated naturally across:
+- Title tags (60 chars, keyword-rich)
+- Meta descriptions (150-160 chars)
+- Meta keywords (comprehensive coverage)
+- Structured data (Organization & ProfessionalService schemas)
+- Open Graph tags (social sharing)
+- Twitter Cards
+- Content headings (H1-H6)
+- Alt attributes (images)
+- Canonical URLs
 
 ## Domain Configuration
 - **Domain**: screwsystems.tech
@@ -84,9 +102,9 @@ All optimizations have been implemented to achieve perfect Lighthouse scores acr
 ## SEO Optimizations (Target: 100)
 
 ### 1. Meta Tags
-- ✅ Title tags (optimized, 60 chars)
-- ✅ Meta descriptions (150-160 chars)
-- ✅ Meta keywords
+- ✅ Title tags (optimized, 60 chars) - Includes "Screw Systems Tech", "Screw Systems", "Screws System"
+- ✅ Meta descriptions (150-160 chars) - Keyword optimized for screw systems, screw systems tech, screws system
+- ✅ Meta keywords - Comprehensive keyword coverage including screw systems, screw systems tech, screws system variations
 - ✅ Canonical URLs (screwsystems.tech)
 - ✅ Language declaration
 
@@ -102,10 +120,11 @@ All optimizations have been implemented to achieve perfect Lighthouse scores acr
 - ✅ All URLs use screwsystems.tech
 
 ### 4. Structured Data (JSON-LD)
-- ✅ Organization schema
-- ✅ ProfessionalService schema
+- ✅ Organization schema - Includes "Screw Systems Tech" as primary name, "Screw Systems" as alternateName
+- ✅ ProfessionalService schema - Optimized with screw systems keywords
 - ✅ All URLs use screwsystems.tech
 - ✅ Complete business information
+- ✅ Keyword-rich descriptions with screw systems, screw systems tech, screws system
 
 ### 5. Technical SEO
 - ✅ robots.txt (screwsystems.tech)

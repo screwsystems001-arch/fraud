@@ -10,9 +10,9 @@ interface SEOProps {
 }
 
 export default function SEO({
-  title = 'Screw Systems - Professional Engineering Development & Consulting Services',
-  description = 'Leading engineering development and consulting company offering software development, engineering consultancy, system design, and technical consulting services.',
-  keywords = 'engineering development, software development, engineering consultancy, technical consulting, system design, engineering services, development company, consultancy services, Bangalore engineering, India engineering services',
+  title = 'Screw Systems Tech - Professional Engineering Development & Consulting Services | Screw Systems',
+  description = 'Screw Systems Tech (Screw Systems) is a leading engineering development and consulting company offering software development, engineering consultancy, system design, and technical consulting services.',
+  keywords = 'screw systems, screw systems tech, screws system, screw systems engineering, screw systems development, screw systems consultancy, screw systems tech services, screw systems software, screw systems consulting, engineering development, software development, engineering consultancy, technical consulting, system design, engineering services, development company, consultancy services, Bangalore engineering, India engineering services',
   image = 'https://screwsystems.tech/logo.png',
   url = 'https://screwsystems.tech',
   type = 'website'

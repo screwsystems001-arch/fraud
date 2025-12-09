@@ -59,30 +59,30 @@ function App() {
     switch (currentPage) {
       case 'about':
         return {
-          title: 'About Us - Screw Systems | Engineering Development & Consulting Company',
-          description: 'Learn about Screw Systems - a leading engineering development and consulting company. We specialize in software development, engineering consultancy, and technical consulting services.',
-          keywords: 'about screw systems, engineering company, development company, consultancy company, Bangalore engineering services',
+          title: 'About Us - Screw Systems Tech | Screw Systems Engineering Development & Consulting Company',
+          description: 'Learn about Screw Systems Tech (Screw Systems) - a leading engineering development and consulting company. We specialize in software development, engineering consultancy, and technical consulting services.',
+          keywords: 'about screw systems, about screw systems tech, screws system about, screw systems engineering company, screw systems development company, screw systems consultancy company, Bangalore engineering services',
           url: 'https://screwsystems.tech/about'
         };
       case 'courses':
         return {
-          title: 'Our Services - Screw Systems | Software Development & Engineering Consultancy',
-          description: 'Explore our professional services: Software Development, Engineering Consultancy, System Design & Architecture, Technical Consulting, Project Management, and Quality Assurance.',
-          keywords: 'engineering services, software development services, engineering consultancy, system design, technical consulting, project management, QA services',
+          title: 'Our Services - Screw Systems Tech | Screw Systems Software Development & Engineering Consultancy',
+          description: 'Explore Screw Systems Tech (Screw Systems) professional services: Software Development, Engineering Consultancy, System Design & Architecture, Technical Consulting, Project Management, and Quality Assurance.',
+          keywords: 'screw systems services, screw systems tech services, screws system services, engineering services, software development services, engineering consultancy, system design, technical consulting, project management, QA services',
           url: 'https://screwsystems.tech/services'
         };
       case 'contact':
         return {
-          title: 'Contact Us - Screw Systems | Get in Touch for Engineering Services',
-          description: 'Contact Screw Systems for engineering development and consulting services. Reach out via email, phone, or WhatsApp. Located in Bangalore, Karnataka, India.',
-          keywords: 'contact screw systems, engineering services contact, Bangalore engineering company, consultancy contact',
+          title: 'Contact Us - Screw Systems Tech | Screw Systems Engineering Services Contact',
+          description: 'Contact Screw Systems Tech (Screw Systems) for engineering development and consulting services. Reach out via email, phone, or WhatsApp. Located in Bangalore, Karnataka, India.',
+          keywords: 'contact screw systems, contact screw systems tech, screws system contact, engineering services contact, Bangalore engineering company, screw systems consultancy contact',
           url: 'https://screwsystems.tech/contact'
         };
       case 'career':
         return {
-          title: 'Careers & Internships - Screw Systems | Join Our Team',
-          description: 'Join Screw Systems! Explore career opportunities and internships in software development, engineering consultancy, AI, web development, data analytics, and more.',
-          keywords: 'careers screw systems, engineering jobs, software development jobs, internships, fresher opportunities, Bangalore jobs',
+          title: 'Careers & Internships - Screw Systems Tech | Screw Systems Join Our Team',
+          description: 'Join Screw Systems Tech (Screw Systems)! Explore career opportunities and internships in software development, engineering consultancy, AI, web development, data analytics, and more.',
+          keywords: 'careers screw systems, careers screw systems tech, screws system careers, engineering jobs, software development jobs, internships, fresher opportunities, Bangalore jobs, screw systems jobs',
           url: 'https://screwsystems.tech/career'
         };
       case 'admin':
@@ -94,9 +94,9 @@ function App() {
         };
       default:
         return {
-          title: 'Screw Systems - Professional Engineering Development & Consulting Services',
-          description: 'Leading engineering development and consulting company offering software development, engineering consultancy, system design, and technical consulting services.',
-          keywords: 'engineering development, software development, engineering consultancy, technical consulting, system design, engineering services, development company, consultancy services',
+          title: 'Screw Systems Tech - Professional Engineering Development & Consulting Services | Screw Systems',
+          description: 'Screw Systems Tech (Screw Systems) is a leading engineering development and consulting company offering software development, engineering consultancy, system design, and technical consulting services.',
+          keywords: 'screw systems, screw systems tech, screws system, screw systems engineering, screw systems development, screw systems consultancy, screw systems tech services, screw systems software, screw systems consulting, engineering development, software development, engineering consultancy, technical consulting, system design, engineering services, development company, consultancy services',
           url: 'https://screwsystems.tech/'
         };
     }
