@@ -12,11 +12,14 @@ import AboutPage from './components/AboutPage';
 import CoursesPage from './components/CoursesPage';
 import ContactPage from './components/ContactPage';
 import CareerPage from './components/CareerPage';
+import AdminPanel from './components/AdminPanel';
 import SEO from './components/SEO';
+import LoginModal from './components/LoginModal';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'courses' | 'contact' | 'career'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'courses' | 'contact' | 'career' | 'admin'>('home');
   const [isGetSeatModalOpen, setIsGetSeatModalOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   // Scroll to top when page changes
   useEffect(() => {
@@ -36,7 +39,9 @@ function App() {
       case 'contact':
         return <ContactPage />;
       case 'career':
-        return <CareerPage />;
+        return <CareerPage onRequireLogin={() => setIsLoginModalOpen(true)} />;
+      case 'admin':
+        return <AdminPanel />;
       default:
         return (
           <>
@@ -80,6 +85,13 @@ function App() {
           keywords: 'careers screw systems, engineering jobs, software development jobs, internships, fresher opportunities, Bangalore jobs',
           url: 'https://screwsystems.tech/career'
         };
+      case 'admin':
+        return {
+          title: 'Admin - Internship Enquiries',
+          description: 'Admin panel for viewing internship enquiries submitted via the career page.',
+          keywords: 'admin, enquiries, internship, screw systems',
+          url: 'https://screwsystems.tech/admin'
+        };
       default:
         return {
           title: 'Screw Systems - Professional Engineering Development & Consulting Services',
@@ -100,7 +112,7 @@ function App() {
         <Navigation 
           currentPage={currentPage} 
           onPageChange={setCurrentPage}
-          onGetSeatClick={openGetSeatModal}
+          onOpenLogin={() => setIsLoginModalOpen(true)}
         />
         
         {/* Main Content */}
@@ -120,6 +132,13 @@ function App() {
         {/* Mobile Sticky CTA */}
         <MobileStickyCTA onGetSeatClick={openGetSeatModal} />
       </div>
+
+      <LoginModal 
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+        onSuccess={() => setIsLoginModalOpen(false)}
+        title="Sign up or login"
+      />
     </>
   );
 }

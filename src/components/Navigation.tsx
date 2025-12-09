@@ -1,16 +1,19 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Home, Users, BookOpen, MessageCircle, Briefcase } from 'lucide-react';
+import { Menu, X, Home, Users, BookOpen, MessageCircle, Briefcase, UserPlus, User, LogOut } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
 
 interface NavigationProps {
-  currentPage: 'home' | 'about' | 'courses' | 'contact' | 'career';
-  onPageChange: (page: 'home' | 'about' | 'courses' | 'contact' | 'career') => void;
-  onGetSeatClick: () => void;
+  currentPage: 'home' | 'about' | 'courses' | 'contact' | 'career' | 'admin';
+  onPageChange: (page: 'home' | 'about' | 'courses' | 'contact' | 'career' | 'admin') => void;
+  onOpenLogin: () => void;
 }
 
-export default function Navigation({ currentPage, onPageChange, onGetSeatClick }: NavigationProps) {
+export default function Navigation({ currentPage, onPageChange, onOpenLogin }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [logoError, setLogoError] = useState(false);
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const { user, logout } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +31,7 @@ export default function Navigation({ currentPage, onPageChange, onGetSeatClick }
     { id: 'contact' as const, label: 'Contact', icon: MessageCircle },
   ];
 
-  const handleNavClick = (page: 'home' | 'about' | 'courses' | 'contact' | 'career') => {
+  const handleNavClick = (page: 'home' | 'about' | 'courses' | 'contact' | 'career' | 'admin') => {
     // Scroll to top immediately when clicking any page (including current page)
     window.scrollTo({ top: 0, behavior: 'smooth' });
     onPageChange(page);
@@ -90,6 +93,44 @@ export default function Navigation({ currentPage, onPageChange, onGetSeatClick }
             ))}
           </div>
 
+          {/* Desktop Auth/Profile */}
+          <div className="hidden md:flex items-center space-x-3">
+            {!user ? (
+              <button
+                onClick={onOpenLogin}
+                className="inline-flex items-center px-4 py-2 rounded-lg bg-navy-800 text-white font-semibold hover:bg-navy-900 transition"
+              >
+                <UserPlus className="w-4 h-4 mr-2" />
+                Sign Up
+              </button>
+            ) : (
+              <div className="relative">
+                <button
+                  onClick={() => setShowProfileMenu((v) => !v)}
+                  className="inline-flex items-center px-4 py-2 rounded-lg border border-slate-200 text-slate-800 font-semibold hover:bg-slate-50 transition"
+                >
+                  <User className="w-4 h-4 mr-2" />
+                  Profile
+                </button>
+                {showProfileMenu && (
+                  <div className="absolute right-0 mt-2 w-44 rounded-xl border border-slate-200 bg-white shadow-lg py-2">
+                    <div className="px-4 py-2 text-xs text-slate-500 break-all">{user?.email}</div>
+                    <button
+                      onClick={() => {
+                        setShowProfileMenu(false);
+                        logout();
+                      }}
+                      className="w-full text-left px-4 py-2 text-sm text-slate-800 hover:bg-slate-50 flex items-center"
+                    >
+                      <LogOut className="w-4 h-4 mr-2" />
+                      Logout
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
@@ -130,6 +171,32 @@ export default function Navigation({ currentPage, onPageChange, onGetSeatClick }
                 {item.label}
               </button>
             ))}
+          </div>
+
+          <div className="pt-2">
+            {!user ? (
+              <button
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  onOpenLogin();
+                }}
+                className="w-full flex items-center px-4 py-3 rounded-lg font-semibold text-white bg-navy-800 hover:bg-navy-900 transition"
+              >
+                <UserPlus className="w-4 h-4 mr-3" />
+                Sign Up
+              </button>
+            ) : (
+              <>
+                <div className="px-4 py-2 text-xs text-slate-500 break-all">{user.email}</div>
+                <button
+                  onClick={logout}
+                  className="w-full flex items-center px-4 py-3 rounded-lg font-semibold text-white bg-navy-800 hover:bg-navy-900 transition"
+                >
+                  <LogOut className="w-4 h-4 mr-3" />
+                  Logout
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
